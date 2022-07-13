@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again -->
+    <script src="app/app.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+
+  <main class="container preload">
+    <header class="header">
+      <img src="images/logo.svg" alt="Logo" class="header__logo">
+      <div class="score">
+        <div class="score__title">score</div>
+        <div class="score__number">0</div> 
+      </div>
+    </header>
+
+    <section class="game">
+      <button href="#" class="choice-btn" data-choice="paper">
+        <div class="choice paper">
+          <img src="images/icon-paper.svg" alt="Paper" class="choice__img">
+        </div>
+      </button>
+
+      <button class="choice-btn" data-choice="scissors">
+        <div class="choice scissors">
+          <img src="images/icon-scissors.svg" alt="Scissors" class="choice__img">
+        </div>
+      </button>
+
+      <button class="choice-btn" data-choice="rock">
+        <div class="choice rock">
+          <img src="images/icon-rock.svg" alt="Rock" class="choice__img">
+        </div>
+      </button>
+    </section>
+  </main>
+
+  <section class="results hidden">
+    <h2 class="results__heading">you picked</h2>
+    <h2 class="results__heading">the house picked</h2>
+    <div class="results__result"></div>
+    <div class="results__winner hidden">
+      <h3 class="results__text"></h3>
+      <button class="play-again">Play Again</button>
+    </div>
+    <div class="results__result"></div>
+  </section>
+
+  <button class="rules-btn btn" tabindex="1">rules</button> 
+  <button class="reset btn" tabindex="2">reset</button> 
+
+  <div class="modal">
+    <div class="modal__container">
+      <header class="modal__header">
+        <h2 class="modal__heading">Rules</h2>
+        <button class="close-btn">
+          <img src="images/icon-close.svg" alt="Close">
+        </button>
+      </header>
+      <div class="rules-img-box">
+        <img src="images/image-rules.svg" alt="Rules" class="rules-img">
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer> -->
+    
+</body>
+</html>

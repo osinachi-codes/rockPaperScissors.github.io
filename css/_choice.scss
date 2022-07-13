@@ -1,0 +1,83 @@
+.choice-btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+   
+}
+
+.choice {
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    background: $lightText;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: inset 0 .8rem $shadowLight;
+
+    &__img {
+        transform: scale(1.5);
+    }
+
+
+    @media screen and (max-width: 600px) {
+        width: 10rem;
+        height: 10rem;
+    }
+
+}
+
+.choice::before,
+.choice::after {
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: -15%;
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.choice::after {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.choice-btn:focus .choice::after {
+    opacity: 1;
+    box-shadow: 0 0 0 2rem #223351;
+    z-index: -2;
+}
+
+.choice.paper::before {
+    background: linear-gradient(to bottom, $paperGradient-1, $paperGradient-2);
+    box-shadow: 0 0.8rem $shadowMed, 0 0.8rem $paperGradient-2;
+    
+}
+
+.choice.scissors::before {
+    background: linear-gradient(to bottom, $scissorsGradient-1, $scissorsGradient-2);
+    box-shadow: 0 0.8rem $shadowMed, 0 0.8rem $scissorsGradient-2;
+}
+
+.choice.rock::before {
+    background: linear-gradient(to bottom, $rockGradient-1, $rockGradient-2);
+    box-shadow: 0 0.8rem $shadowMed, 0 0.8rem $rockGradient-2;
+}
+
+.choice-btn[data-choice='paper'] {
+    grid-area: paper;
+}
+
+.choice-btn[data-choice='scissors'] {
+    grid-area: scissors;
+}
+
+.choice-btn[data-choice='rock'] {
+    grid-area: rock;
+    align-self: end;
+}
+

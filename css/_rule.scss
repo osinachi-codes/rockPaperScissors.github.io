@@ -1,0 +1,40 @@
+ .btn {
+    position: absolute;
+    background: none;
+    outline: none;
+    border: 2px solid rgba($lightText,.5)   ;
+    border-radius: .96rem;
+    color: $lightText;
+    padding: .96rem 4rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 2.08rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+
+
+    // @media screen and (max-width: 1300px) {
+    //   right: 50%;
+    //   bottom: -100px;  
+    //   transform: translateX(50%);
+    // }
+}
+
+.rules-btn:focus {
+  border: 2px solid $lightText;
+}
+
+
+.rules-btn {
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.reset {
+  bottom: 2rem;
+  left: 2rem;
+}
+
+
+
+
